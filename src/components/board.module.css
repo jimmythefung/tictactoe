@@ -2,23 +2,41 @@
   display: flex;
   flex-direction: column;
   height: 835px;
+  
+  /* border: 2px solid black; */
+  /* background-color: grey; */
+}
+
+.container {
+  /* border: 2px solid black;
+  background-color: blueviolet; */
+  margin: 1rem auto;
 }
 
 .game-status {
-  margin: 1rem auto;
+  display: block;
   font-size: 2rem;
+  margin-bottom: 0.5rem;
+
+  /* border: 2px solid black;
+  background-color: goldenrod; */
 }
 
 .game-board {
-  margin: 0.5rem auto;
+  width: fit-content;
+  border: 2px solid black;
+  margin-bottom: 0.5rem;
+  /* background-color: red; */
 }
 
 .game-info {
-  margin: 0rem auto;
+  height: 32rem;
+  /* border: 2px solid black; */
+  /* background-color: aquamarine; */
 }
 
 .move-record button {
-  margin-top: 1rem;
+  margin-bottom: 1rem;
   height: 2rem;
   width: 10rem;
 }

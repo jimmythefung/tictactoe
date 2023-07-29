@@ -74,11 +74,7 @@ function Board({ xIsNext, squares, onPlay }) {
     }
 
     // Return the board component
-    return (
-        <>
-            {board_rows}
-        </>
-    );
+    return <>{board_rows}</>;
 }
 
 export default function Game() {
@@ -125,16 +121,19 @@ export default function Game() {
     // Game component
     return (
         <div className={`${styles["game"]}`}>
-            <div className={`${styles["game-status"]}`}>{status}</div>
-            <div className={`${styles["game-board"]}`}>
-                <Board
-                    xIsNext={xIsNext}
-                    squares={currentSquares}
-                    onPlay={handlePlay}
-                />
-            </div>
-            <div className={`${styles["game-info"]}`}>
-                <ol>{moves}</ol>
+            <div className={`${styles["container"]}`}>
+                <div className={`${styles["game-status"]}`}>{status}</div>
+                <div className={`${styles["game-board"]}`}>
+                    <Board
+                        xIsNext={xIsNext}
+                        squares={currentSquares}
+                        onPlay={handlePlay}
+                    />
+                </div>
+                <div className={`${styles["game-info"]}`}>
+                    <div>History</div>
+                    <ol>{moves}</ol>
+                </div>
             </div>
         </div>
     );
