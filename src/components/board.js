@@ -34,19 +34,6 @@ function calculateWinner(squares) {
 }
 
 function Board({ xIsNext, squares, onPlay }) {
-    // States - commented out since now passed in from args.
-    // const [xIsNext, setXIsNext] = useState(true);
-    // const [squares, setSquares] = useState(Array(9).fill(null));
-
-    // Check winner
-    const winner = calculateWinner(squares);
-    let status;
-    if (winner) {
-        status = "Winner: " + winner;
-    } else {
-        status = "Next player: " + (xIsNext ? "X" : "O");
-    }
-
     // Helpers
     function handleClick(i) {
         if (squares[i] || calculateWinner(squares)) {
@@ -89,7 +76,6 @@ function Board({ xIsNext, squares, onPlay }) {
     // Return the board component
     return (
         <>
-            <div className={styles.status}>{status}</div>
             {board_rows}
         </>
     );
@@ -101,6 +87,15 @@ export default function Game() {
     const [currentMove, setCurrentMove] = useState(0);
     const xIsNext = currentMove % 2 === 0;
     const currentSquares = history[currentMove];
+
+    // Check winner
+    const winner = calculateWinner(currentSquares);
+    let status;
+    if (winner) {
+        status = "Winner: " + winner;
+    } else {
+        status = "Next player: " + (xIsNext ? "X" : "O");
+    }
 
     // Helpers
     function handlePlay(nextSquares) {
@@ -130,6 +125,7 @@ export default function Game() {
     // Game component
     return (
         <div className={`${styles["game"]}`}>
+            <div className={`${styles["game-status"]}`}>{status}</div>
             <div className={`${styles["game-board"]}`}>
                 <Board
                     xIsNext={xIsNext}

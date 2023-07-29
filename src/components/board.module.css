@@ -1,24 +1,24 @@
 .game {
   display: flex;
   flex-direction: column;
-  height: 200%;
+  height: 835px;
 }
 
-.game-board {
-  margin: 2rem auto;
-}
-
-.game-info {
-  margin: auto;
-}
-
-.status {
-  margin: 1rem 0rem;
+.game-status {
+  margin: 1rem auto;
   font-size: 2rem;
 }
 
+.game-board {
+  margin: 0.5rem auto;
+}
+
+.game-info {
+  margin: 0rem auto;
+}
+
 .move-record button {
-  margin: 0.5rem;
+  margin-top: 1rem;
   height: 2rem;
   width: 10rem;
 }
