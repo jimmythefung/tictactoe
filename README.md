@@ -4,8 +4,12 @@ TicTacToe implemented on nextjs, with mobile-first design approach.
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+Install node modules dependencies:
+```bash
+npm install
+```
 
-First, run the development server:
+Then run the development server:
 
 ```bash
 npm run dev
