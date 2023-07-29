@@ -1,0 +1,45 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  height: 200%;
+}
+
+.game-board {
+  margin: 2rem auto;
+}
+
+.game-info {
+  margin: auto;
+}
+
+.status {
+  margin: 1rem 0rem;
+  font-size: 2rem;
+}
+
+.move-record button {
+  margin: 0.5rem;
+  height: 2rem;
+  width: 10rem;
+}
+
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 34px;
+  height: 5rem;
+  width: 5rem;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+}
